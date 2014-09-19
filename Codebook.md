@@ -8,7 +8,7 @@ There are three files included in the repo:
 3. Codebook.md: this file
 
 ## Input data set
-The input data set is a zip file that can be downloaded from: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. Unzipping the input data set yields the following data files. See the corresponding README.txt file that describes the various input data elements in detail.
+The input data set is a zip file that can be downloaded from: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. Unzipping the input data set yields the following data files. See the corresponding README.md file that describes the various input data elements in detail.
 
 ##Tidy data set
 The tidy data set contains the following columns (in order):
