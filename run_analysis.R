@@ -64,7 +64,7 @@ dfMergeTrain <- cbind(dfSubTrain, dfActTrain, dfFilteredTrain)
 # Step 9 - Merge test and training data sets
 dfMerged <- rbind(dfMergeTest, dfMergeTrain)
 
-# Step 10 - Join with activity descriptions data set to supply activity names
+# Step 10 - Read activity descriptions data set to supply activity names
 dfActivityNames <- read.table(file=".\\getdata-projectfiles-UCI HAR Dataset\\UCI HAR Dataset\\activity_labels.txt", col.names=c("ActivityCode", "Activity")) 
 
 # Step 11 - Tidy data set creation
