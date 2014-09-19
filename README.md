@@ -12,7 +12,7 @@ The following files must be present in the user's working directory to successfu
 1. run_analysis.r
 2. UCI HAR dataset folder containing the following files:
  * features_info.txt: information about the variables used on the feature vector.
- * features.txt': List of all features.
+ * features.txt: List of all features.
  * activity_labels.txt: Links the class labels with their activity name.
  * train/X_train.txt: Training set.
  * train/y_train.txt: Training labels.
