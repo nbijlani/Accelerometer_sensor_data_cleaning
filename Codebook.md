@@ -13,31 +13,26 @@ The input data set is a zip file that can be downloaded from: https://d396qusza4
 ##Tidy data set
 The tidy data set contains the following columns (in order):
 
-1. Subject: This is the value of the single column entry taken from the test data set "subject_test.txt" and training data set "subject_train.txt".
+1. Subject: This is the value of the single column entry taken from the test data set "subject_test.txt" and training data set "subject_train.txt"
+ * Type: Numeric
+ * Units: Same as for input data set
+ * Transformation: None.
 
-Type: Numeric
-Units: Same as for input data set 
-Transformation: None.
+2. Activity: This is the descriptive value  taken from the data set "activity_labels.txt"
 
-2. Activity: This is the descriptive value  taken from the data set activity_labels.txt.
-
-Type: Character
-
-Transformation: None.
-
-Possible values: 
-* WALKING
-* WALKING_UPSTAIRS
-* WALKING_DOWNSTAIRS
-* SITTING
-* STANDING
-* LAYING
+ * Type: Character
+ * Transformation: None
+ * Possible values: 
+  * WALKING
+  * WALKING_UPSTAIRS
+  * WALKING_DOWNSTAIRS
+  * SITTING
+  * STANDING
+  * LAYING
 
 3. Observation: This is the descriptive value of features taken from the data set "features.txt". Only that subset of features is considered that contain the value "mean()" or "std()". Per the project requirement, only measurements related to mean and standard deviation are to be included in the output. Hence, all other features are excluded.
-
-Type: Character
-
-Transformation: The following transformations were performed on the feature descriptions included in the data set:
+ * Type: Character
+ * Transformation: The following transformations were performed on the feature descriptions included in the data set:
   * Replace "BodyBody"" by "Body"
   * Replace beginning "t" by "Time -"
   * Replace beginning "f" by "Frequency -"
@@ -53,8 +48,7 @@ Transformation: The following transformations were performed on the feature desc
   * Replace terminating "X" by "- X Axis"
   * Replace terminating "Y" by "- Y Axis"
   * Replace terminating "Z" by "- Z Axis"
-  
-Possible values: The transformation of input feature descriptions to output "Observation" values is shown below:
+ * Possible values: The transformation of input feature descriptions to output "Observation" values is shown below:
 tBodyAcc-mean()-X -> Time-Body Acceleration - Mean - X Axis
 tBodyAcc-mean()-Y -> Time-Body Acceleration - Mean - Y Axis
 tBodyAcc-mean()-Z -> Time-Body Acceleration - Mean - Z Axis
