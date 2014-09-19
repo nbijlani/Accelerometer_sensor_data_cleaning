@@ -25,7 +25,7 @@ The tidy data set contains the following columns (in order):
  
 3. Observation: This is the descriptive value of features taken from the data set "features.txt". Only that subset of features is considered that contain the value "mean()" or "std()". Per the project requirement, only measurements related to mean and standard deviation are to be included in the output. Hence, all other features are excluded.
  * Type: Character
- * Transformation: The following transformations were performed on the feature descriptions included in the data set:
+ * Transformation: The following transformations were performed on the feature descriptions:
    * Replace "BodyBody" by "Body"
    * Replace beginning "t" by "Time -"
    * Replace beginning "f" by "Frequency -"
@@ -113,6 +113,6 @@ The tidy data set contains the following columns (in order):
     fBodyBodyGyroJerkMag-std() | Frequency-Body Angular Velocity Jerk Magnitude - Standard Deviation
 
 4. Mean Value: This is the mean value of the above mean and standard deviation measurements aggregated by activity for each subject
-* Type: Numeric
-* Units: Same as for input data set (aggregated)
-* Transformation: Aggregated original measurement values from the merged test data set "X_test.txt" and training data set "X_train.txt" to compute mean by activity for each subject.
+  * Type: Numeric
+  * Units: Same as for input data set (aggregated)
+  * Transformation: Aggregated original measurement values from the merged test data set "X_test.txt" and training data set "X_train.txt" to compute mean by activity for each subject.
