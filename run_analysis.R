@@ -56,7 +56,7 @@ dfTrain <- read.table(file=".\\getdata-projectfiles-UCI HAR Dataset\\UCI HAR Dat
 dfFilteredTrain <- dfTrain[,colsToSelect]
 colnames(dfFilteredTrain) <- dfFilteredFeatures$Signal
 
-# Step 8 - Add activity and student codes into test data set
+# Step 8 - Add activity and student codes into training data set
 dfActTrain <- read.table(file=".\\getdata-projectfiles-UCI HAR Dataset\\UCI HAR Dataset\\train\\Y_train.txt", col.names=c("ActivityCode")) 
 dfSubTrain <- read.table(file=".\\getdata-projectfiles-UCI HAR Dataset\\UCI HAR Dataset\\train\\subject_train.txt", col.names=c("Subject"))
 dfMergeTrain <- cbind(dfSubTrain, dfActTrain, dfFilteredTrain)
@@ -84,8 +84,8 @@ dfMelt2 <- melt(dfAg, id=c("Subject", "ActivityCode"))
 dfTidy2 <- merge(dfMelt2, dfActivityNames, by.x = "ActivityCode", by.y = "ActivityCode")
 dfTidy2 <- dfTidy2[,!names(dfTidy2) %in% c("ActivityCode")]
 colnames(dfTidy2) <- c("Subject", "Observation", "Mean Value", "Activity")
+# Reorder columns according to tidy data principles: fixed variables followed by measured variables
 dfTidy2Final <- dfTidy2[, c(1, 4, 2:3)]
 dfTidy2Final <- dfTidy2Final[order(dfTidy2Final$Subject),]
-#print (head(dfTidy2Final))
 
 write.table(dfTidy2Final, file=".\\ProjectOutput.txt", row.names=FALSE)
